@@ -1,5 +1,6 @@
 package com.ams.config;
 
+import com.ams.exception.InvalidTokenException;
 import com.ams.service.UserService;
 import com.ams.utility.JwtUtility;
 import jakarta.servlet.FilterChain;
@@ -49,7 +50,7 @@ public class JwtFilter extends OncePerRequestFilter {
             }
             filterChain.doFilter(request, response);
         } catch (Exception e) {
-            throw new RuntimeException("Token not found..");
+            throw new InvalidTokenException("Invalid or expired token");
         }
     }
 }

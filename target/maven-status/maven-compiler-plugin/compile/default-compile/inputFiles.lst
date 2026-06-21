@@ -35,6 +35,8 @@ D:\0.Hexaware FSD works\ams_project\ams\src\main\java\com\ams\enums\Role.java
 D:\0.Hexaware FSD works\ams_project\ams\src\main\java\com\ams\enums\ServiceStatus.java
 D:\0.Hexaware FSD works\ams_project\ams\src\main\java\com\ams\exception\FileInvalidExtensionException.java
 D:\0.Hexaware FSD works\ams_project\ams\src\main\java\com\ams\exception\FileNotFoundException.java
+D:\0.Hexaware FSD works\ams_project\ams\src\main\java\com\ams\exception\InvalidFilePathException.java
+D:\0.Hexaware FSD works\ams_project\ams\src\main\java\com\ams\exception\InvalidTokenException.java
 D:\0.Hexaware FSD works\ams_project\ams\src\main\java\com\ams\exception\ResourceNotFoundException.java
 D:\0.Hexaware FSD works\ams_project\ams\src\main\java\com\ams\mapper\AssetAllocationMapper.java
 D:\0.Hexaware FSD works\ams_project\ams\src\main\java\com\ams\mapper\AssetCategoryMapper.java

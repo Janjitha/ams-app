@@ -31,9 +31,9 @@ public class AssetController {
         return assetService.addAsset(dto, categoryId);
     }
 
-    // Paginated GET ALL — returns { data: [], totalPages: N }
+    // Paginated get all
     @GetMapping("/all")
-    public ResponseEntity<?> getAll(
+    public ResponseEntity<Object> getAll(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "7") int size) {
 

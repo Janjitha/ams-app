@@ -25,7 +25,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class AssetAllocationServiceTest {
+class AssetAllocationServiceTest {
 
     // Which repository(s) are u mocking
     @Mock
@@ -49,7 +49,7 @@ public class AssetAllocationServiceTest {
     // Common Sample data for all test cases in AssetAllocationService
     // Sequence:- Sample data loads - Test case runs - Sample data deloads
     @BeforeEach
-    public void sampleData() {
+    void sampleData() {
         employee = new User();
         employee.setId(1);
         employee.setUsername("john");

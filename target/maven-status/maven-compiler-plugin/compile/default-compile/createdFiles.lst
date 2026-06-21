@@ -16,6 +16,7 @@ com\ams\controller\AssetAuditController.class
 com\ams\service\AssetService.class
 com\ams\utility\ResponseUtility.class
 com\ams\enums\AuditStatus.class
+com\ams\exception\InvalidFilePathException.class
 com\ams\mapper\UserMapper.class
 com\ams\dto\AdminDashboardDto.class
 com\ams\dto\AssetDto.class
@@ -60,6 +61,7 @@ com\ams\repository\AssetAuditRepository.class
 com\ams\controller\AssetAllocationController.class
 com\ams\dto\AuditRespDto.class
 com\ams\config\SecurityConfig.class
+com\ams\exception\InvalidTokenException.class
 com\ams\model\Asset.class
 com\ams\mapper\AuditMapper.class
 com\ams\controller\AssetCategoryController.class

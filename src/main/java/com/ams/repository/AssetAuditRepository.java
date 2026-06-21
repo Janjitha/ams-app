@@ -10,5 +10,4 @@ public interface AssetAuditRepository extends JpaRepository<AssetAudit, Integer>
 
     List<AssetAudit> findByEmployee(User employee);
 
-//    long countByStatus(AuditStatus status);
 }

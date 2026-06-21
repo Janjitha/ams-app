@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class AssetCategoryServiceTest {
+class AssetCategoryServiceTest {
 
     // Which repository(s) are u mocking
     @Mock
@@ -43,7 +43,7 @@ public class AssetCategoryServiceTest {
     // Common Sample data for all test cases in AssetCategoryService
     // Sequence:- Sample data loads - Test case runs - Sample data deloads
     @BeforeEach
-    public void sampleData() {
+    void sampleData() {
         category = new AssetCategory();
         category.setId(1);
         category.setCategoryName("Laptops");
@@ -58,7 +58,7 @@ public class AssetCategoryServiceTest {
     }
 
     @Test
-    public void getAllCategories_MustReturnSomething() {
+    void getAllCategories_MustReturnSomething() {
         when(assetCategoryRepository.findAll()).thenReturn(List.of(category, category1));
 
         List<AssetCategory> actualCall = assetCategoryService.getAll();
@@ -69,7 +69,7 @@ public class AssetCategoryServiceTest {
     }
 
     @Test
-    public void getAllCategories_ReturnsEmptyList() {
+    void getAllCategories_ReturnsEmptyList() {
         when(assetCategoryRepository.findAll()).thenReturn(List.of());
 
         List<AssetCategory> actualCall = assetCategoryService.getAll();

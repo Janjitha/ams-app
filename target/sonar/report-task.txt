@@ -3,5 +3,5 @@ projectKey=Janjitha_ams-app
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.92448
 dashboardUrl=https://sonarcloud.io/dashboard?id=Janjitha_ams-app
-ceTaskId=AZ7rmDDfS1WyonZCv0vc
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZ7rmDDfS1WyonZCv0vc
+ceTaskId=AZ7r10BZUIPMkB8vfqKC
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZ7r10BZUIPMkB8vfqKC

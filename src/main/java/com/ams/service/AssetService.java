@@ -3,6 +3,7 @@ package com.ams.service;
 import com.ams.dto.AssetDto;
 import com.ams.dto.AssetRespDto;
 import com.ams.enums.AssetStatus;
+import com.ams.exception.InvalidFilePathException;
 import com.ams.exception.ResourceNotFoundException;
 import com.ams.mapper.AssetMapper;
 import com.ams.model.Asset;
@@ -23,6 +24,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 @Service
 public class AssetService {
@@ -117,9 +119,12 @@ public class AssetService {
         Path uploadPath = Paths.get(uploadLocation).normalize();
         Files.createDirectories(uploadPath);
         // Attach the file name to the upload path
-        Path destinationPath = uploadPath.resolve(
-                Objects.requireNonNull(file.getOriginalFilename())
-        ).normalize();
+        String fileName = UUID.randomUUID() + "_" +
+                Paths.get(Objects.requireNonNull(file.getOriginalFilename())).getFileName().toString();
+        Path destinationPath = uploadPath.resolve(fileName).normalize();
+        if (!destinationPath.startsWith(uploadPath)) {
+            throw new InvalidFilePathException("Invalid file path");
+        }
         // Copy the original file (Multipart) onto destination upload path
         Files.copy(file.getInputStream(), destinationPath, StandardCopyOption.REPLACE_EXISTING);
         // Save the file name in DB
