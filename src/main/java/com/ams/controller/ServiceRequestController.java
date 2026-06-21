@@ -6,7 +6,6 @@ import com.ams.enums.ServiceStatus;
 import com.ams.service.ServiceRequestService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;

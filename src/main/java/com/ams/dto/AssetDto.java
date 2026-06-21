@@ -6,7 +6,6 @@ import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.time.LocalDate;
 
 public record AssetDto(
         @NotBlank(message = "This field is mandatory")

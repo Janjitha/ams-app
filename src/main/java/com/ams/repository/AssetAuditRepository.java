@@ -1,6 +1,5 @@
 package com.ams.repository;
 
-import com.ams.enums.AuditStatus;
 import com.ams.model.AssetAudit;
 import com.ams.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;

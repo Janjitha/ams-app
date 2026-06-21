@@ -3,7 +3,6 @@ package com.ams.controller;
 import com.ams.dto.AllocationRespDto;
 import com.ams.service.AssetAllocationService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
