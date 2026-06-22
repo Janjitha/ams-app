@@ -50,6 +50,11 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.PUT, "/api/categories/update/{id}").hasAuthority(ADMIN)
                         .requestMatchers(HttpMethod.DELETE, "/api/categories/delete/{id}").hasAuthority(ADMIN)
 
+                        // CATEGORY (v2)
+                        .requestMatchers(HttpMethod.GET, "/api/v2/categories/get/{id}").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/api/v2/categories/search").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/api/v2/categories/all-with-count").hasAuthority(ADMIN)
+
                         // ASSET
                         .requestMatchers(HttpMethod.POST, "/api/assets/add/{categoryId}").hasAuthority(ADMIN)
                         .requestMatchers(HttpMethod.GET, "/api/assets/all").authenticated()
